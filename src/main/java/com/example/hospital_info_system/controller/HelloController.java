@@ -1,4 +1,4 @@
-package com.example.hospital_info_system;
+package com.example.hospital_info_system.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
