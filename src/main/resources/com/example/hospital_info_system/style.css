@@ -1,0 +1,142 @@
+/* General Styles */
+* {
+    -fx-box-sizing: border-box;
+    -fx-margin: 0;
+    -fx-padding: 0;
+}
+
+.root {
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-background-color: #f4f4f4;
+    -fx-text-fill: #333;
+}
+
+/* VBox Styles */
+.vbox {
+    -fx-padding: 20px;
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+}
+
+/* TextField Styles */
+.text-field {
+    -fx-padding: 10px;
+    -fx-margin-bottom: 10px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 4px;
+}
+
+/* Button Styles */
+.button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-padding: 10px 15px;
+    -fx-border-width: 0;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #218838;
+}
+
+/* ListView and TableView Styles */
+.list-view, .table-view {
+    -fx-border-color: #ccc;
+    -fx-border-radius: 4px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-view .table-cell {
+    -fx-padding: 8px;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+/* Dialog Styles */
+.dialog-pane {
+    -fx-background-color: white;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Split Pane */
+.split-pane {
+    -fx-background-color: transparent;
+}
+
+.split-pane-divider {
+    -fx-background-color: #e9ecef;
+    -fx-padding: 0 1px;
+}
+
+/* Form Container */
+.form-container {
+    -fx-spacing: 15;
+    -fx-padding: 20;
+}
+
+/* Action Buttons */
+.action-button {
+    -fx-min-width: 80px;
+}
+
+.edit-button {
+    -fx-background-color: #17a2b8;
+}
+
+.delete-button {
+    -fx-background-color: #dc3545;
+}
+
+/* Header Styles */
+.header {
+    -fx-background-color: #3498db;
+    -fx-padding: 15px;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.section-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}
+
+/* Footer Styles */
+.footer {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Make buttons in action column smaller */
+.edit-button, .delete-button {
+    -fx-font-size: 10px;
+    -fx-padding: 3px 5px;
+    -fx-min-width: 50px;
+}
+
+/* Table row hover effect */
+.table-row-cell:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Search field styling */
+#searchField {
+    -fx-background-radius: 15px;
+    -fx-padding: 5px 10px;
+}

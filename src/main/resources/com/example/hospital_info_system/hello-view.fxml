@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.hospital_info_system.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.hospital_info_system.controller.PatientController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+    
+    <top>
+        <HBox alignment="CENTER" styleClass="header">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <Label styleClass="title-label" text="Hospital Information System" />
+        </HBox>
+    </top>
+    
+    <left>
+        <VBox prefWidth="300" spacing="10" styleClass="form-container">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <Label styleClass="section-label" text="Patient Information" />
+            <TextField fx:id="nameField" promptText="Enter Name" />
+            <TextField fx:id="surnameField" promptText="Enter Surname" />
+            <TextField fx:id="addressField" promptText="Enter Address" />
+            <TextField fx:id="telephoneField" promptText="Enter Telephone" />
+            
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <Button onAction="#addPatient" styleClass="button" text="Add Patient" />
+                <Button onAction="#clearFields" styleClass="button" text="Clear" />
+            </HBox>
+        </VBox>
+    </left>
+    
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label styleClass="section-label" text="Patient Records" />
+                <Region HBox.hgrow="ALWAYS" />
+            </HBox>
+            
+            <TableView fx:id="patientTableView" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="50" text="ID" />
+                    <TableColumn fx:id="nameColumn" prefWidth="100" text="Name" />
+                    <TableColumn fx:id="surnameColumn" prefWidth="100" text="Surname" />
+                    <TableColumn fx:id="addressColumn" prefWidth="150" text="Address" />
+                    <TableColumn fx:id="telephoneColumn" prefWidth="100" text="Telephone" />
+                    <TableColumn fx:id="actionsColumn" prefWidth="120" text="Actions" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" styleClass="footer">
+            <padding>
+                <Insets bottom="10" left="20" right="20" top="10" />
+            </padding>
+            <Label text=" 2025 Hospital Information System" />
+        </HBox>
+    </bottom>
+</BorderPane>
