@@ -4,7 +4,7 @@ A comprehensive JavaFX application for managing patient records in a hospital en
 
 ## Screenshot
 
-<![img.png](img.png)!
+<![img.png](img.png)
 
 
 ## Overview
