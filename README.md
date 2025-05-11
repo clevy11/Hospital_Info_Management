@@ -2,10 +2,11 @@
 
 A comprehensive JavaFX application for managing patient records in a hospital environment.
 
-## Screenshot
+## Screenshot of the system(erd diaram and ui)
 
 <![img.png](img.png)
 
+![img_1.png](img_1.png)
 
 ## Overview
 
